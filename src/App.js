@@ -15,6 +15,36 @@ import UserMessageComponent from './Components/UserMessageComponent';
 import NameList from './Components/NameList';
 import Form from './Components/Form';
 import LifeCycleA from './Components/LifeCycleA';
+import FragmentDemo from './Components/FragmentDemo';
+import Table from './Components/Table';
+
+
+//  *********** React.Fragment ***********
+
+
+class App extends Component {
+  render() {
+    return (
+          <div className="App">
+
+            <Table></Table>
+
+            {/* To return multiple elements in JSX. Without having parent DIV tag */}
+            {/* <FragmentDemo />   */}
+
+          </div>
+        );
+  }
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -29,22 +59,19 @@ import LifeCycleA from './Components/LifeCycleA';
   Updating(2) : static getDerivedStateFromError , componentDidCatch
 */
 
-class App extends Component {
-  render() {
-    return (
-          <div className="App">
-
-            <LifeCycleA />
-
-
-          </div>
-        );
-  }
-}
+// class App extends Component {
+//   render() {
+//     return (
+//           <div className="App">
 
 
 
+//             {/* <LifeCycleA /> */}
 
+//           </div>
+//         );
+//   }
+// }
 
 
 
