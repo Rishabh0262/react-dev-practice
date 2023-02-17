@@ -27,9 +27,10 @@ class App extends Component {
     return (
           <div className="App">
 
-            <Table></Table>
+            <Table></Table>       {/* Describe inside Commit of react-fragment Branch */}
 
-            {/* To return multiple elements in JSX. Without having parent DIV tag */}
+            {/* To return multiple elements in JSX. Without having parent DIV tag
+                  * Though we can use either <> ... </> OR <React.Fragment> ... <React.Fragment> (if we need to pass a key) */}
             {/* <FragmentDemo />   */}
 
           </div>

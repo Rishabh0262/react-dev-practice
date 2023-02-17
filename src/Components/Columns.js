@@ -8,10 +8,10 @@ function Columns() {
         // </React.Fragment>
         
 
-        <div>
+        <>
             <td>Name</td>
             <td>Rishabh</td>
-        </div>
+        </>
     )
 }
 
