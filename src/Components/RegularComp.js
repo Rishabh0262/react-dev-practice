@@ -4,7 +4,7 @@ export class RegularComp extends Component {
   render() {
     console.log("Regular Component render")
     return (
-      <div>RegularComp</div>
+      <div>RegularComp, Name is {this.props.name}</div>
     )
   }
 }
