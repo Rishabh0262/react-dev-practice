@@ -7,23 +7,26 @@ class RefsDemo extends Component {
         this.inputRef = React.createRef()
 
 
-      // ref... approach 2
-        this.cbRef = null
-        this.setCbRef = element => {
-          this.cbRef = element
-        }      
+      
+        
+      /* ref... approach 2 */
+
+        // this.cbRef = null
+        // this.setCbRef = element => {
+        //   this.cbRef = element
+        // }      
     }
 
     componentDidMount() {
-      // ref... approach 1
-        // this.inputRef.current.focus()
-        // console.log(this.inputRef)
+      /* ref... approach 1 */
+        this.inputRef.current.focus()
+        console.log(this.inputRef)
 
 
-      // ref... approach 2
-        if (this.cbRef) {
-          this.cbRef.focus() 
-        }
+      /* ref... approach 2 */
+        // if (this.cbRef) {
+        //   this.cbRef.focus() 
+        // }
 
 
     }
@@ -39,7 +42,7 @@ class RefsDemo extends Component {
       <div>
         RefsDemo   {/* Although we can use "autoFocus" attribute of <input> */}
         <input type="text" ref={this.inputRef} placeholder="ref approach 1"  />
-        <input type="text" ref={this.cbRef} placeholder="ref approach 2" />
+        {/* <input type="text" ref={this.cbRef} placeholder="ref approach 2" /> */}
         <button onClick={this.clickHandler}>click</button>
       </div>
     )

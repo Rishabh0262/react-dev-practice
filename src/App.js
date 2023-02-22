@@ -1,6 +1,7 @@
 // import logo from './logo.svg';
 import React, {Component} from 'react';
 import './App.css';
+import FocusInput from './Components/FocusInput';
 import ParentComp from './Components/ParentComp';
 import RefsDemo from './Components/RefsDemo';
 import RefsDemo1 from './Components/RefsDemo1';
@@ -13,16 +14,12 @@ class App extends Component {
     return (
           <div className="App">
 
-
-
-
-            
             
             {/* Refs : Access DOM nodes directly on react. "React.createRef()"
                 2nd method is not working.
             */}
 
-              {/* <RefsDemo /> */}
+              <RefsDemo />
 
               {/*   :/  (this component only contain 2nd Refs method)                           */}
               {/* <RefsDemo1 />       */}
