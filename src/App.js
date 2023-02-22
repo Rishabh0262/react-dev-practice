@@ -2,6 +2,8 @@
 import React, {Component} from 'react';
 import './App.css';
 import ParentComp from './Components/ParentComp';
+import RefsDemo from './Components/RefsDemo';
+import RefsDemo1 from './Components/RefsDemo1';
 
 
 //  *********** React.Fragment ***********
@@ -10,7 +12,22 @@ class App extends Component {
   render() {
     return (
           <div className="App">
+
+
+
+
             
+            
+            {/* Refs : Access DOM nodes directly on react. "React.createRef()"
+                2nd method is not working.
+            */}
+
+              {/* <RefsDemo /> */}
+
+              {/*   :/  (this component only contain 2nd Refs method)                           */}
+              {/* <RefsDemo1 />       */}
+              
+
 
 
             {/* "Parent Component" we used for comparing "Pure Component" & "Regular Component" 
@@ -22,7 +39,8 @@ class App extends Component {
               * as Shallow-Comparision check the reference to the First element
               * better to use NEW array/object that reflects changes
             */}
-            <ParentComp />
+
+            {/* <ParentComp /> */}
            
           </div>
         );
