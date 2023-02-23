@@ -14,12 +14,24 @@ class App extends Component {
     return (
           <div className="App">
 
+            {/*       Refs with class component     
+                         parent : FocusInput.js
+                         child  : Input.js 
+            */}
+            <FocusInput />
+
+
+
+            
+
+
+
             
             {/* Refs : Access DOM nodes directly on react. "React.createRef()"
                 2nd method is not working.
             */}
 
-              <RefsDemo />
+              {/* <RefsDemo /> */}
 
               {/*   :/  (this component only contain 2nd Refs method)                           */}
               {/* <RefsDemo1 />       */}
