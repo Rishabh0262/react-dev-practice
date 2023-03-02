@@ -15,7 +15,7 @@ class App extends Component {
     return (
           <div className="App">
 
-            {/* Forwarding Ref : Used for automatic forwarding a ref to a children  */}
+            {/* Forwarding Ref : Used for automatic forwarding a ref through a component to its children  */}
             <FwdRefParentInput />
 
 
