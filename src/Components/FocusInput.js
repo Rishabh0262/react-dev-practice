@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-// import Input form './Input'     // *form is wrong keyword
+// import Input form './Input'     // *form is wrong keyword 
 import  Input  from './Input'
 
 class FocusInput extends Component {

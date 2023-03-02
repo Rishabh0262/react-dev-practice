@@ -2,6 +2,7 @@
 import React, {Component} from 'react';
 import './App.css';
 import FocusInput from './Components/FocusInput';
+import FwdRefParentInput from './Components/FwdRefParentInput';
 import ParentComp from './Components/ParentComp';
 import RefsDemo from './Components/RefsDemo';
 import RefsDemo1 from './Components/RefsDemo1';
@@ -14,11 +15,17 @@ class App extends Component {
     return (
           <div className="App">
 
+            {/* Forwarding Ref : Used for automatic forwarding a ref to a children  */}
+            <FwdRefParentInput />
+
+
+
+
             {/*       Refs with class component     
                          parent : FocusInput.js
                          child  : Input.js 
             */}
-            <FocusInput />
+            {/* <FocusInput /> */}
 
 
 
