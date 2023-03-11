@@ -23,16 +23,21 @@ class App extends Component {
                 * getDerivedStateFromError() : render Fallback UI
                 * componentDidCatch() : log error info
 
+
+                Use : (maybe) as we use multiple mobile specs comparision
             */}
 
 
             <ErrorBoundary>
-
                 <Hero heroName={"Superman"} />
-                <Hero heroName={"Batman"} />
-                <Hero heroName={"Joker"} />
-
             </ErrorBoundary>
+            <ErrorBoundary>
+                <Hero heroName={"Batman"} />
+            </ErrorBoundary>
+              <ErrorBoundary>
+                <Hero heroName={"Joker"} />
+              </ErrorBoundary>
+
 
 
 
