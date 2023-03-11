@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import './App.css';
 import PortalDemo from './Components/PortalDemo'
 import Hero from './Components/Hero';
+import ErrorBoundary from './Components/ErrorBoundary';
 
 //  *********** React.Portals ***********
 
@@ -24,10 +25,14 @@ class App extends Component {
 
             */}
 
-            <Hero heroName={"Superman"} />
-            <Hero heroName={"Batman"} />
-            <Hero heroName={"Joker"} />
 
+            <ErrorBoundary>
+
+                <Hero heroName={"Superman"} />
+                <Hero heroName={"Batman"} />
+                <Hero heroName={"Joker"} />
+
+            </ErrorBoundary>
 
 
 
