@@ -2,7 +2,7 @@
 import React, {Component} from 'react';
 import './App.css';
 import PortalDemo from './Components/PortalDemo'
-
+import Hero from './Components/Hero';
 
 //  *********** React.Portals ***********
 
@@ -11,6 +11,31 @@ class App extends Component {
   render() {
     return (
           <div className="App">
+
+            {/*   ******** Error Boundary ********
+                it is react-component that catch JS error in their child component tree.
+                log those errros
+                displays a fallback UI
+
+
+                A class component becomes an Error Boundary by defining either or both following LifeCycle Method
+                * getDerivedStateFromError() : render Fallback UI
+                * componentDidCatch() : log error info
+
+            */}
+
+            <Hero heroName={"Superman"} />
+            <Hero heroName={"Batman"} />
+            <Hero heroName={"Joker"} />
+
+
+
+
+
+
+
+
+
 
             {/* By default every thing renders inside "div#root" from 'public/index.html'
             * Portals are used for rendering component to differet <div> e.g. "div.portal-root"
@@ -28,7 +53,11 @@ class App extends Component {
                                 
 
             */}
-            <PortalDemo />
+            {/* <PortalDemo /> */}
+
+
+
+
           </div>
         );
   }
