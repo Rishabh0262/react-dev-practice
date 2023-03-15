@@ -4,6 +4,8 @@ import './App.css';
 import PortalDemo from './Components/PortalDemo'
 import Hero from './Components/Hero';
 import ErrorBoundary from './Components/ErrorBoundary';
+import ClickCount from './Components/ClickCount';
+import HoverCount from './Components/HoverCount';
 
 //  *********** React.Portals ***********
 
@@ -12,6 +14,25 @@ class App extends Component {
   render() {
     return (
           <div className="App">
+
+            {/* ********* Higher Order Component ********* 
+
+              Here we have used exactly same increamentCounter() to count Clicks & Hovers.
+              if there is a way, we could have just Re-use the same functions within component of with sister-component
+
+              Use : sharing common functionality within components without repeating codes.
+            
+            */}
+
+            <ClickCount />
+
+            <HoverCount />
+
+
+
+
+
+
 
             {/*   ******** Error Boundary ********
                 it is react-component that catch JS error in their child component tree.
@@ -27,7 +48,7 @@ class App extends Component {
                 Use : (maybe) as we use multiple mobile specs comparision
             */}
 
-
+{/* 
             <ErrorBoundary>
                 <Hero heroName={"Superman"} />
             </ErrorBoundary>
@@ -37,7 +58,7 @@ class App extends Component {
               <ErrorBoundary>
                 <Hero heroName={"Joker"} />
               </ErrorBoundary>
-
+ */}
 
 
 
