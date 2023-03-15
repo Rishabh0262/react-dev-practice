@@ -3,26 +3,12 @@ import UpdatedComponent from './withCounter'
 
 
 class HoverCount extends Component {
-    constructor(props) {
-      super(props)
     
-      this.state = {
-         count : 0
-      }
-    }
-
-    increamentCount = () => {
-        this.setState(prevSate => {
-            return {count : prevSate.count + 1}
-        })
-    }
-
-
   render() {
-      const {count} = this.state
+      const {count, increamentCount} = this.props
     return (
       <div>
-        <h2 onMouseMove={this.increamentCount}>{this.props.name} Hovered {count} times</h2>
+        <h2 onMouseMove={increamentCount}>Hovered {count} times</h2>
       </div>
     )
   }
