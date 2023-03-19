@@ -16,15 +16,17 @@ class App extends Component {
           <div className="App">
 
             {/* ********* Higher Order Component ********* 
-
+                  A function that accepts a Component and returns a component
               Here we have used exactly same increamentCounter() to count Clicks & Hovers.
               if there is a way, we could have just Re-use the same functions within component of with sister-component
 
               Use : sharing common functionality within components without repeating codes.
             
+              Naming convention : camelCase for fileName.
+
             */}
 
-            <ClickCount />
+            <ClickCount name="Rishabh" />
 
             <HoverCount />
 

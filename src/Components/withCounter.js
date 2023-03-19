@@ -18,7 +18,14 @@ const withCounter = (WrappedComponent) => {
       
       
         render() {
-            return (<WrappedComponent count={this.state.count} incrementCount={this.incrementCount} />)
+            console.log("withCounter : " + this.props.name)  // it is working irrespective to the including all props, line 26
+            // An extra line will be present as this is used by HoverCount.js as well w/o any props in it.
+            return (
+            <WrappedComponent 
+                count={this.state.count} 
+                incrementCount={this.incrementCount} 
+                {... this.props}
+            />)
         }
     } 
     return WithCounter 
