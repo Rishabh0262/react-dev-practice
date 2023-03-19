@@ -11,9 +11,17 @@ const withCounter = (WrappedComponent, incrementNumber) => {
           }
       
           incrementCount = () => {
+
+            if (incrementNumber) {
               this.setState(prevSate => {
                   return {count : prevSate.count + incrementNumber}
               })
+            }
+            else {
+                this.setState(prevSate => {
+                    return {count : prevSate.count + 1}
+                })
+            }
           }
       
       
