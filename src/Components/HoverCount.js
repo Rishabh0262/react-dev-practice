@@ -14,4 +14,4 @@ class HoverCount extends Component {
   }
 }
 
-export default withCounter(HoverCount)
+export default withCounter(HoverCount, 10)

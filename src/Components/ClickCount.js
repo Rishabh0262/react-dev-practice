@@ -17,4 +17,4 @@ class ClickCount extends Component {
   }
 }
 
-export default withCounter(ClickCount)
+export default withCounter(ClickCount, 5)
