@@ -7,6 +7,10 @@ import ErrorBoundary from './Components/ErrorBoundary';
 import ClickCount from './Components/ClickCount';
 import HoverCount from './Components/HoverCount';
 
+import ClickCountTwo from './Components/ClickCountTwo';
+import HoverCountTwo from './Components/HoverCountTwo';
+import User from './Components/User';
+
 //  *********** React.Portals ***********
 
 
@@ -14,6 +18,22 @@ class App extends Component {
   render() {
     return (
           <div className="App">
+
+            {/* ********* Render Props ********* 
+                      Alternative for HOC!
+                 An alternate way to use function in multiple Component w/o coping it.
+                 reusing the functionality
+            */}
+
+            <ClickCountTwo />
+            <HoverCountTwo />
+
+            <User render={(isLoggedIn)=> isLoggedIn ? "Rishabh" : "Guest"} />
+
+
+
+
+
 
             {/* ********* Higher Order Component ********* 
                   A function that accepts a Component and returns a component
@@ -26,9 +46,9 @@ class App extends Component {
 
             */}
 
-            <ClickCount name="Rishabh" />
+            {/* <ClickCount name="Rishabh" /> */}
 
-            <HoverCount />
+            {/* <HoverCount /> */}
 
 
 
