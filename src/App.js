@@ -1,41 +1,61 @@
 // import logo from './logo.svg';
-import React, {Component} from 'react';
-import './App.css';
-import PortalDemo from './Components/PortalDemo'
-import Hero from './Components/Hero';
-import ErrorBoundary from './Components/ErrorBoundary';
-import ClickCount from './Components/ClickCount';
-import HoverCount from './Components/HoverCount';
+import React, { Component } from "react";
+import "./App.css";
+import PortalDemo from "./Components/PortalDemo";
+import Hero from "./Components/Hero";
+import ErrorBoundary from "./Components/ErrorBoundary";
+import ClickCount from "./Components/ClickCount";
+import HoverCount from "./Components/HoverCount";
 
-import ClickCountTwo from './Components/ClickCountTwo';
-import HoverCountTwo from './Components/HoverCountTwo';
-import User from './Components/User';
+import ClickCountTwo from "./Components/ClickCountTwo";
+import HoverCountTwo from "./Components/HoverCountTwo";
+import User from "./Components/User";
+import Counter from "./Components/Counter";
 
 //  *********** React.Portals ***********
-
 
 class App extends Component {
   render() {
     return (
-          <div className="App">
-
-            {/* ********* Render Props ********* 
+      <div className="App">
+        {/* ********* Render Props ********* 
                       Alternative for HOC!
                  An alternate way to use function in multiple Component w/o coping it.
                  reusing the functionality
             */}
 
-            <ClickCountTwo />
+        <Counter
+          render={(count, incrementCount) => (
+            <ClickCountTwo count={count} incrementCount={incrementCount} />
+          )}
+        />
+
+         {/* *********************************
+         here ^ "render" v is just most used NamingConvention. We can write anyting instead of "render"! */}
+
+        <Counter
+          render={(count, incrementCount) => (
+            <HoverCountTwo count={count} incrementCount={incrementCount} />
+          )}
+        />
+
+
+
+        {/* <ClickCountTwo />
             <HoverCountTwo />
 
-            <User render={(isLoggedIn)=> isLoggedIn ? "Rishabh" : "Guest"} />
+            <User render={(isLoggedIn)=> isLoggedIn ? "Rishabh" : "Guest"} /> */}
 
 
 
 
 
 
-            {/* ********* Higher Order Component ********* 
+
+
+
+
+        {/* ********* Higher Order Component ********* 
                   A function that accepts a Component and returns a component
               Here we have used exactly same increamentCounter() to count Clicks & Hovers.
               if there is a way, we could have just Re-use the same functions within component of with sister-component
@@ -46,17 +66,11 @@ class App extends Component {
 
             */}
 
-            {/* <ClickCount name="Rishabh" /> */}
+        {/* <ClickCount name="Rishabh" /> */}
 
-            {/* <HoverCount /> */}
+        {/* <HoverCount /> */}
 
-
-
-
-
-
-
-            {/*   ******** Error Boundary ********
+        {/*   ******** Error Boundary ********
                 it is react-component that catch JS error in their child component tree.
                 log those errros
                 displays a fallback UI
@@ -70,7 +84,7 @@ class App extends Component {
                 Use : (maybe) as we use multiple mobile specs comparision
             */}
 
-{/* 
+        {/* 
             <ErrorBoundary>
                 <Hero heroName={"Superman"} />
             </ErrorBoundary>
@@ -82,15 +96,7 @@ class App extends Component {
               </ErrorBoundary>
  */}
 
-
-
-
-
-
-
-
-
-            {/* By default every thing renders inside "div#root" from 'public/index.html'
+        {/* By default every thing renders inside "div#root" from 'public/index.html'
             * Portals are used for rendering component to differet <div> e.g. "div.portal-root"
             
             
@@ -106,22 +112,10 @@ class App extends Component {
                                 
 
             */}
-            {/* <PortalDemo /> */}
-
-
-
-
-          </div>
-        );
+        {/* <PortalDemo /> */}
+      </div>
+    );
   }
 }
-
-
-
-
-
-
-
-
 
 export default App;
