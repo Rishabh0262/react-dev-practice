@@ -24,20 +24,20 @@ class App extends Component {
                  reusing the functionality
             */}
 
-        <Counter
-          render={(count, incrementCount) => (
-            <ClickCountTwo count={count} incrementCount={incrementCount} />
-          )}
-        />
+        <Counter>
+          {(count, incrementCount) => (
+              <ClickCountTwo count={count} incrementCount={incrementCount} />
+            )}
+        </Counter>
 
          {/* *********************************
          here ^ "render" v is just most used NamingConvention. We can write anyting instead of "render"! */}
 
-        <Counter
-          render={(count, incrementCount) => (
-            <HoverCountTwo count={count} incrementCount={incrementCount} />
-          )}
-        />
+        <Counter>
+          {(count, incrementCount) => (
+              <HoverCountTwo count={count} incrementCount={incrementCount} />
+            )}
+        </Counter>
 
 
 

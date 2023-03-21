@@ -18,7 +18,7 @@ class Counter extends Component {
   render() {
     return (
         // here "render" is just most used NamingConvention. We can write anyting instead of "render"!
-      <div> {this.props.render(this.state.count, this.incrementCount)} </div>
+      <div> {this.props.children(this.state.count, this.incrementCount)} </div>
     )
   }
 }
