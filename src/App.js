@@ -23,11 +23,11 @@ class App extends Component {
         
         */}
 
-        {/* <UserProvider value="Rishabh" > */}
+        <UserProvider value="Rishabh" >
 
           <ComponentC />
 
-        {/* </UserProvider> */}
+        </UserProvider>
                    
       </div>
     );
