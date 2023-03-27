@@ -12,7 +12,7 @@ class ComponentE extends Component {
       <div>
         Component E context {this.context}
         <ComponentF />
-        </div>
+      </div>
     )
   }
 }
@@ -20,3 +20,17 @@ class ComponentE extends Component {
 // ComponentE.contextType = UserContext      // 1st way to use Context!
 
 export default ComponentE
+
+/*      *** DEMERIT of Using ContextType ***  example...
+  return (
+    <ThemeContext.Consumer>
+      {theme => (
+        <UserContext.Consumer>
+          {user => (
+            <ProfilePage user={user} theme={theme} />       // just to use this line, we need to get nested this much.
+          )}
+        </UserContext.Consumer>
+      )}
+    </ThemeContext.Consumer>
+  );
+*/
