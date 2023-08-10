@@ -35,7 +35,7 @@ class EventBind extends Component {
         console.log(this)
     }
 
-    EventHandler4 = () => {
+    EventHandler4 = () => {             // 4.1 Here we have use the Arrow function itself in here.
         this.setState({
             message : "button clicked via Class property as Arrow Funtion"
         })
@@ -65,7 +65,7 @@ class EventBind extends Component {
 
 
         {/* <!-- (4) Class property as "Arrow functions", 
-        a little change in syntax of writing a function(class Property) --> */}
+        a little change in syntax of writing a function(class Property), at function-declaration. --> */}
         <button onClick={this.EventHandler4}> Click-4 </button>  
 
       </div>

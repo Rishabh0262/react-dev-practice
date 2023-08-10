@@ -4,6 +4,56 @@
 2. ## `cd hello-world`
 
 
+## How to revise the React through this project efficiently
+
+    1. come to "master" branch. Up to Lec. 24, all the files are present here.
+
+    2. Open App.js file : Here all the the component-use hierarchy is given in segments. 
+            Having Recent Lecture on top.
+
+### Though you can check the 'import' list in the for true hierarchy order of components.
+        
+    3. Each segment shows, which "component" used first and which one at later. 
+            From Up-to-Down
+
+
+    4. Further Explanation is withing the Components.
+    
+    
+## Extention :  ES7+ React/Redux/React-Native/JS snippets
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -72,3 +122,89 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ********* Component Lifecycle method ********** -->
+
+
+    Mounting(4) : Constructor, static getDerivedStateFromProps, render, componentDidMount
+
+        constructor(props) : A special function that will get called whenever the  Component is created.
+            USE          : Initialise state , Binding the event handler.
+            DON'Ts       : do not cause side effects. Ex: HTTP request.
+            KEEP IN MIND : super(props) , Directly overwrite this.state(only in here, elsewhere we'll need to use the setState().)
+
+        static getDerivedStateFromProps(props, state) : When state ooff the component depends on the changes of props over time.
+            USE    : set the State (when the prop is being passed to the state.)
+            DON'Ts : do not cause side effects. Ex: HTTP request.
+
+        render()    : Only required method in the RCE.
+             USE    : Read props & state , return JSX
+             DON'Ts : Do not change state or interact with DOM or make ajax calls.
+             * Children components lifecycle methods are also executed. * 
+
+        componentDidMount() : invoked immediately after a component & all its children component have been rendered to the DOM.
+            USE : Cause side effect. Ex. Interact with the DOM or perform any ajax call to load the data.
+
+
+
+
+
+    Updatding(5) : static getDerivedStateFromProps, shouldComponentUpdate, render,            getSnapshotBeforeUpdate, componentDidUpdate
+
+        static getDerivedStateFromProps(props, state) : method is called everytime the component is re-rendered.  {rarely used method}
+            USE    : set the State (when the prop is being passed to the state.)
+            DON'Ts : do not cause side effects. Ex: HTTP request.
+
+        shouldComponentUpdate(nextProps, nextState) : Dictates if the component should update or not.      {rarely used method}
+            USE    : Performance Optimization
+            DON'TS : do not cause side-effects.  Ex: HTTP request.  OR calling setState() method.
+   
+        render()    : Only required method in the RCE.
+             USE    : Read props & state , return JSX
+             DON'Ts : Do not change state or interact with DOM or make ajax calls.
+             * Children components lifecycle methods are also executed. * 
+
+        getSnapshotBeforeUpdate(nextProps, nextState) : called right before the changes from the virtual DOM are to be reflected in the DOM.
+            USE    : capture some information from the DOM.
+                    the method will either returns a value or null. Returnd value to be passed as 3rd parameter to the next method.
+
+        componentDidUpdate(nextProps, nextState, snapshot) : called after the render is  finished in the re-render cycles.
+            USE : cause side effects 
+
+
+
+
+    Unmounting(1) : componentWillUnmount
+
+    Updating(2) : static getDerivedStateFromError , componentDidCatch
+
+
+
+
+

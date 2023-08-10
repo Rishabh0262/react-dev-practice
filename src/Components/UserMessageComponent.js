@@ -26,7 +26,7 @@ class UserMessageComponent extends Component {
 
 
 
-
+// Approach 2 : element variable approach...
 
     // let message
 
@@ -41,7 +41,7 @@ class UserMessageComponent extends Component {
 
 
 
-
+// Approach 1
 
     // if (this.state.login)
     //     return (<div><h2>Hello Rishabh</h2></div>)

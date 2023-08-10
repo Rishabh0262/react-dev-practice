@@ -44,7 +44,6 @@ class LifeCycleB extends Component {
     return (
         <div>
             <div>LifeCycleB</div>
-            
         </div>
       
     )
