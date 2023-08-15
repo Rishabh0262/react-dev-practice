@@ -68,3 +68,75 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## listing commits
+
+    1. Untill Lecture 24, LifeCycle Component
+
+    2. Here we used the Table.js & Columns.js(as child component).
+    
+        But in child component 2 <td> can't be return in <div> tag... as it is a subcomponent of <table> tag.
+
+        That's why, we need to use either <> ... </> OR <React.Fragment> ... <React.Fragment>
+
+    3. Console warnings from the Column.js is resolved using wraping the elements into <> ... </>.
+
+    4. Example of using 'key' attribute in <React.Fragment>...</React.Fragment>
+
+    5. Restored App.js to to blank.
+
+    6. Here we used PureComponent & RegularComponent comparision. 
+        So console is showing re-rendering of with a buffer or 2 secs.
+
+    7. rendered props in Child Component that is passed from Parent Component.
+
+    8. used  ParentComponent as PureComponent. 
+        Make sure to use the NEW array/object to show difference in prev. or curr. state/props.
+
+    9. Memo is for Functional Component. (as same as PureComp for Class Component). 
+        we export React.memo(functional-ComponentName).
+
+    10. We do nothing but use 'React.memo(<name_of_functional_component>)' in 'export default' of 'MemoComp.js'.   
+            This way it will help me avoiding unnecessary re-render of the Component in the web page.   
+            [MemoComponent => rfce, PureComponent => rce].
+
+    11. used  ParentComponent as PureComponent. 
+            Make sure to use the NEW array/object to show difference in prev. or curr. state/props.
+
+    12. Memo is for Functional Component. 
+            (as same as PureComp for Class Component). 
+            we export React.memo(functional-ComponentName).
+
+    13. We do nothing but use 'React.memo(<name_of_functional_component>)' in 'export default' of 'MemoComp.js'.   
+            This way it will help me avoiding unnecessary re-render of the Component in the web page.   
+            [MemoComponent => rfce, PureComponent => rce]
+
+
+
+
+
+
+
+
+
+
+
+
