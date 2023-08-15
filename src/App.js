@@ -19,7 +19,7 @@ import FragmentDemo from './Components/FragmentDemo';
 import Table from './Components/Table';
 
 
-//  *********** React.Fragment ***********
+//  *********** React.Fragment  [L-25] ***********
 
 
 // class App extends Component {
@@ -29,6 +29,7 @@ import Table from './Components/Table';
 
 //             {/* To return multiple elements in JSX. Without having parent DIV tag
 //                   * Though we can use either <> ... </> OR <React.Fragment> ... <React.Fragment> (if we need to pass a key) */}
+
 //             {/* <FragmentDemo />   */}
 
 
