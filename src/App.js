@@ -10,18 +10,22 @@ class App extends Component {
     return (
           <div className="App">
             
+          {/* ****** PureComponents only works for RCE ***** */}
 
 
-            {/* "Parent Component" we used for comparing "Pure Component" & "Regular Component" 
-              * Where PureComp is used for preventing unnecessary re-render 
-              * (here, updated state value is same as prev. value)
-              * PureComponent implements shouldComponentUpdate() with a shallow props & state comparison. [Re-renders only, when SC return]
-              * 
-              * Avoid Changing Object or Array in state/props, 
-              * as Shallow-Comparision check the reference to the First element
-              * better to use NEW array/object that reflects changes
-              * 
-              **** [(in simple terms), if prevState === newState : "PureComponent" prevents re-render.]
+            {/* 
+            
+              "Parent Component" we used for comparing "Pure Component" & "Regular Component" 
+                * Where PureComp is used for preventing unnecessary re-render 
+                * (here, updated state value is same as prev. value)
+                * PureComponent implements shouldComponentUpdate() with a shallow props & state comparison. [Re-renders only, when SC return]
+                * 
+                * Avoid Changing Object or Array in state/props, 
+                * as Shallow-Comparision check the reference to the First element
+                * better to use NEW array/object that reflects changes
+                * 
+                **** [(in simple terms), if prevState === newState : "PureComponent" prevents re-render.]
+                
             */}
 
 
